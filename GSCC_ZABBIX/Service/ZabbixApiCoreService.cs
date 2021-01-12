@@ -1,20 +1,19 @@
 using System;
 
-using ZabbixAPICore;
-
 namespace Zabbix.Service
 {
     public class ZabbixApiCoreService : IZabbixApiCoreService
     {
-        private Zabbix zabbix;
+        private ZabbixAPICore.Zabbix zabbix;
 
         public ZabbixApiCoreService(string username, string password, string basePath) {
-            Zabbix zabbix = new Zabbix(username, password, basePath);
+            ZabbixAPICore.Zabbix zabbix = new ZabbixAPICore.Zabbix(username, password, basePath);
             zabbix.LoginAsync().Wait();
         }
 
-        public Zabbix GetZabbix() {
-          return this.zabbix;
+        ZabbixAPICore.Zabbix IZabbixApiCoreService.GetZabbix()
+        {
+            return this.zabbix;
         }
     }
 }
