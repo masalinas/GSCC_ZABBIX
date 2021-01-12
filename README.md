@@ -1,0 +1,2 @@
+# GSCC_ZABBIX
+GSCC Zabbix API
