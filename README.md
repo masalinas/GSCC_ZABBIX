@@ -49,6 +49,13 @@ To have a simle access to Zabbix API we will use this .NET dependency
 dotnet add package Zabbix.API.Core
 ```
 
+## Configure Zabbix Core .NET Webapi App:
+From any appsettings files we must configure these attributes:
+
+- Username: the username to authenticate with Zabbix
+- password: the password to authenticate with Zabbix
+- BasePath: the url where Zabbix API is running
+
 ## Start Zabbix Core .NET Webapi App:
 ```
 dotnet run --project ./GSCC_ZABBIX/GSCC_ZABBIX.csproj
