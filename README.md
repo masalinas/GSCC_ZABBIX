@@ -3,7 +3,7 @@ A simple Webapi Core .NET PoC with swagger to test the Zabbix API
 
 To read zabbix API go to [Zabbix API](https://www.zabbix.com/documentation/current/manual/api/reference)
 
-## Start Zabbix service middleware from docker compose yaml for postgress:
+## Start Zabbix service middleware from docker compose yaml using postgress and nginx web server
 clone repository zabbix docker support
 
 ```
