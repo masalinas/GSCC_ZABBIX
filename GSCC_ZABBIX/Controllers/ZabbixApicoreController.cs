@@ -23,10 +23,29 @@ namespace Zabbix.Controller
       }
 
       [HttpGet("/get-json")]
-      [ProducesResponseType(typeof(Task<ZabbixAPICore.Response>), (int)HttpStatusCode.OK)]
-      public Task<ZabbixAPICore.Response> GetResponseJsonAsync(string method, object parameters)
+      [ProducesResponseType(typeof(Task<string>), (int)HttpStatusCode.OK)]
+      //public Task<string> GetResponseJsonAsync(string method, object parameters)
+      public Task<string> GetResponseJsonAsync()
       {
-        Task<ZabbixAPICore.Response> response = this.zabbixApiCoreService.GetZabbix().GetResponseObjectAsync(method, parameters);
+            //Task<string> response = this.zabbixApiCoreService.GetZabbix().GetResponseJsonAsync(method, parameters);
+            /*Task<string> response = this.zabbixApiCoreService.GetZabbix().GetResponseJsonAsync("user.get", new
+            {
+                output = "userid",
+                filter = new { userid = 2 }
+            });*/
+
+            Task<string> response = this.zabbixApiCoreService.GetZabbix().GetResponseJsonAsync("user.get", new
+            {
+                output = "extend"
+            });
+            
+            /*Task<string> response = this.zabbixApiCoreService.GetZabbix().GetResponseJsonAsync("apiinfo.version", new
+            {
+            });*/
+
+        response.Wait();
+
+        Console.WriteLine(response.Result);
 
         return response;
       }

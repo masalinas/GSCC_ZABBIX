@@ -9,6 +9,9 @@ namespace Zabbix.Service
         public ZabbixApiCoreService(string username, string password, string basePath) {
             ZabbixAPICore.Zabbix zabbix = new ZabbixAPICore.Zabbix(username, password, basePath);
             zabbix.LoginAsync().Wait();
+            //zabbix.LoginAsync();
+
+            this.zabbix = zabbix;
         }
 
         ZabbixAPICore.Zabbix IZabbixApiCoreService.GetZabbix()

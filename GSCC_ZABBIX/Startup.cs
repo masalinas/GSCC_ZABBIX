@@ -33,7 +33,7 @@ namespace GSCC_ZABBIX
         public void ConfigureServices(IServiceCollection services)
         {
             // add zabbix service
-            services.AddSingleton<IZabbixApiCoreService>(zb => new ZabbixApiCoreService("admin", "zabbix", "http://192.168.1.38/api_jsonrpc.php"));
+            services.AddSingleton<IZabbixApiCoreService>(zb => new ZabbixApiCoreService("Admin", "zabbix", "http://192.168.1.38/api_jsonrpc.php"));
 
             // add swagger service
             services.AddSwaggerGen(c =>
