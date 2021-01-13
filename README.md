@@ -24,7 +24,14 @@ dotnet add package Zabbix.API.Core
 ```
 
 # start zabbix service middleware from docker compose yaml for postgress:
-from ./git/zabbix-docker folder execute:
+clone repository zabbix docker support
+
+```
+git clone https://github.com/zabbix/zabbix-docker
+```
+
+from the new repository zabbix-docker execute this command to start zabbix with postgress
+under alpine images:
 
 ```
 docker-compose -f docker-compose_v3_alpine_pgsql_latest.yaml up
