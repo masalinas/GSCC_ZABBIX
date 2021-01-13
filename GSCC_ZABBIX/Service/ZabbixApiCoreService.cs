@@ -10,7 +10,7 @@ namespace Zabbix.Service
             ZabbixAPICore.Zabbix zabbix = new ZabbixAPICore.Zabbix(username, password, basePath);
             zabbix.LoginAsync().Wait();
 
-            Console.WriteLine("Conectiong");
+            Console.WriteLine("Connected to Zabbix ...");
 
             this.zabbix = zabbix;
         }

@@ -30,6 +30,8 @@ namespace Zabbix.Controller
 
             response.Wait();
 
+            Console.WriteLine(response.Result);
+
             return response;
       }
     }
