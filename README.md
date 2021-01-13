@@ -59,9 +59,9 @@ dotnet add package Zabbix.API.Core
 ## Configure Zabbix Core .NET Webapi App:
 From any appsettings files we must configure these attributes:
 
-- Username: the username to authenticate with Zabbix
-- password: the password to authenticate with Zabbix
-- BasePath: the url where Zabbix API is running
+- **Username**: the username to authenticate with Zabbix
+- **Password**: the password to authenticate with Zabbix
+- **BasePath**: the url where Zabbix API is running
 
 ## Start Zabbix Core .NET Webapi App:
 ```
