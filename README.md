@@ -12,8 +12,13 @@ curl -s -i -X POST -H 'Content-Type: application/json-rpc' -d '{ "params": { "us
 result:
 {"jsonrpc":"2.0","result":"3e1a3bee565d9a9e0a7c97150a942aa2","id":1}
 
-# add dependencies
+# add zabbix dependencies
 dotnet add package Zabbix.API.Core
 
-# start project
+# start zabbix service middleware
+from ./git/zabbix-docker execute:
+
+docker-compose -f docker-compose_v3_alpine_pgsql_latest.yaml up
+
+# start webapi project
 dotnet run --project ./GSCC_ZABBIX/GSCC_ZABBIX.csproj
