@@ -49,7 +49,7 @@ result:
 ```
 
 ## Add Zabbix Core .NET dependency in your Webapi Core .NET project:
-To have a simle access to Zabbix API we will use this .NET dependency
+To have a simple access to Zabbix API we will use this .NET dependency
 
 [Zabbix API Core](https://share.zabbix.com/zabbix-tools-and-utilities/dir-libraries/c/zabbix-net-core-api-library)
 ```
