@@ -1,4 +1,9 @@
-# start zabbix service middleware from docker compose yaml for postgress:
+## Description
+A simple Webapi Core .NET PoC with swagger to test the zabbix API
+
+To read zabbix API go to [Zabbix API](https://www.zabbix.com/documentation/current/manual/api/reference)
+
+## start zabbix service middleware from docker compose yaml for postgress:
 clone repository zabbix docker support
 
 ```
@@ -12,7 +17,7 @@ under alpine images:
 docker-compose -f docker-compose_v3_alpine_pgsql_latest.yaml up
 ```
 
-# execute zabbix info version command from curl:
+## execute zabbix info version command from curl:
 We could execute some commands to check the zabbix API:
 
 Recover the zabbix info version
@@ -36,12 +41,12 @@ result:
 {"jsonrpc":"2.0","result":"3e1a3bee565d9a9e0a7c97150a942aa2","id":1}
 ```
 
-# add zabbix Core .NET dependency in your Webapi Core .NET project:
+## add zabbix Core .NET dependency in your Webapi Core .NET project:
 ```
 dotnet add package Zabbix.API.Core
 ```
 
-# start zabbix Core .NET Webapi App:
+## start zabbix Core .NET Webapi App:
 ```
 dotnet run --project ./GSCC_ZABBIX/GSCC_ZABBIX.csproj
 ```
