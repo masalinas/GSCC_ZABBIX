@@ -63,7 +63,7 @@ namespace GSCC_ZABBIX
             // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Tresa API COM V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "GSCC API COM V1");
             });
 
             app.UseRouting();
