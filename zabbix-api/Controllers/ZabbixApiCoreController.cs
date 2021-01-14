@@ -22,7 +22,7 @@ namespace Zabbix.Controller
             this.zabbixApiCoreService = zabbixApiCoreService;
       }
 
-      [HttpGet("/get-json")]
+      [HttpPost("/get-json")]
       [ProducesResponseType(typeof(Task<string>), (int)HttpStatusCode.OK)]
       public Task<string> GetResponseJsonAsync(string method, object parameters)
       {

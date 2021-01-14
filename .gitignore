@@ -21,5 +21,5 @@ nupkg/
 .vscode
 
 # reports generated
-GSCC_ZABBIX/bin/*
-GSCC_ZABBIX/obj/*
+zabbix-api/bin/*
+zabbix-api/obj/*

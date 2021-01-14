@@ -16,9 +16,10 @@ using Microsoft.OpenApi.Models;
 
 using Newtonsoft.Json;
 
+using SignalRChat.Hubs;
 using Zabbix.Service;
 
-namespace GSCC_ZABBIX
+namespace ZabbixApi
 {
     public class Startup
     {
@@ -32,6 +33,15 @@ namespace GSCC_ZABBIX
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+              options.AddPolicy("CorsPolicy", builder => builder
+                .WithOrigins("http://localhost:4200")
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials());
+            });
+
             // configure zabbix service
             services.AddSingleton<IZabbixApiCoreService>(zb =>
               new ZabbixApiCoreService(Configuration.GetValue<string>("Zabbix:Username"),
@@ -41,12 +51,13 @@ namespace GSCC_ZABBIX
             // add swagger service
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "GSCC Zabbix API COM", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Zabbix API COM", Version = "v1" });
             });
 
             services.AddControllers().AddNewtonsoftJson(options =>
                 options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
 
+            services.AddSignalR();
             services.AddControllers();
         }
 
@@ -66,16 +77,21 @@ namespace GSCC_ZABBIX
             // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "GSCC Zabbix COM v1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Zabbix COM v1");
             });
 
             app.UseRouting();
+
+            app.UseCors("CorsPolicy");
 
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+
+                // configure SignalR Hub on the topic zabbixhub
+                endpoints.MapHub<ZabbixHub>("/zabbixhub");
             });
         }
     }

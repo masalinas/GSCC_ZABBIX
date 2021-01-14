@@ -65,5 +65,5 @@ From any appsettings files we must configure these attributes:
 
 ## Start Zabbix Core .NET Webapi App:
 ```
-dotnet run --project ./GSCC_ZABBIX/GSCC_ZABBIX.csproj
+dotnet run --project ./zabbix-api/zabbix-api.csproj
 ```

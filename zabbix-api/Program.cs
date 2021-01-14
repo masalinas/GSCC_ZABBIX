@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace GSCC_ZABBIX
+namespace ZabbixApi
 {
     public class Program
     {
