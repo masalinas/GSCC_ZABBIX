@@ -10,6 +10,12 @@ Zabbix portal
 ![Swagger_Screen](
 https://user-images.githubusercontent.com/1216181/104485242-88189800-55ca-11eb-9f65-b8a5baa5ac09.png)
 
+## Dependencies
+
+- Swashbuckle: core .NET Swagger implementation.
+- Zabbix.API.Core: core .NET Zabbix API implementation.
+- Microsoft signalR: websockets core NET 3.1 implementation.
+
 ## Start Zabbix service middleware from docker compose yaml using postgress and nginx web server
 clone repository zabbix docker support
 
