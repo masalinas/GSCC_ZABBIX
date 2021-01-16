@@ -10,7 +10,8 @@ Swagger interface
 Zabbix portal
 
 ![Swagger_Screen](
-https://user-images.githubusercontent.com/1216181/104485242-88189800-55ca-11eb-9f65-b8a5baa5ac09.png)
+![image](https://user-images.githubusercontent.com/1216181/104812914-ef6e5c00-5805-11eb-87ad-b273bf8ddd47.png)
+
 
 ## Dependencies
 
