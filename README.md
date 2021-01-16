@@ -9,7 +9,6 @@ Swagger interface
 
 Zabbix portal
 
-![Swagger_Screen](
 ![image](https://user-images.githubusercontent.com/1216181/104812914-ef6e5c00-5805-11eb-87ad-b273bf8ddd47.png)
 
 
