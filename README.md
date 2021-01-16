@@ -4,9 +4,11 @@ A simple Webapi Core .NET PoC with swagger to test the Zabbix API
 To read zabbix API go to [Zabbix API](https://www.zabbix.com/documentation/current/manual/api/reference)
 
 Swagger interface
-![image](https://user-images.githubusercontent.com/1216181/104620861-be6c1b00-568f-11eb-99dd-76b6db660e88.png)
+
+![image](https://user-images.githubusercontent.com/1216181/104812893-b9c97300-5805-11eb-811d-d54dd6533d2a.png)
 
 Zabbix portal
+
 ![Swagger_Screen](
 https://user-images.githubusercontent.com/1216181/104485242-88189800-55ca-11eb-9f65-b8a5baa5ac09.png)
 
