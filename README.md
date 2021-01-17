@@ -1,5 +1,5 @@
 ## Description
-A simple Webapi Core .NET PoC with swagger to test the Zabbix API
+A Web Api Core .NET PoC with swagger to test the Zabbix API and Zabbix Webhooks to send RT data
 
 To read zabbix API go to [Zabbix API](https://www.zabbix.com/documentation/current/manual/api/reference)
 
